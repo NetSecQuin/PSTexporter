@@ -1,5 +1,5 @@
 # PSTexporter
-Export/Extract all attachments from a Microsoft PST file. 
+Export/Extract all attachments from all Microsoft .pst file(s) present in a directory. 
 
 ### Background
 
@@ -23,7 +23,27 @@ The PSTexporter.sh script does not take in any inputs, however it does require t
 input_dir="/home/username/PSTfiles"
 output_dir="/home/username/PSTfiles/"
 ```
+### Output
+
+This script will extract all embedded attachments from a .pst file that contains .eml file(s). It will generate directories for each .eml and each assocaited attachment. It also will create a file called ``` results.txt``` which will show a list off files that were extracted, and which PSTs or EMLs that they were derived from. 
+
+An example output of what can be seen in results.txt is shown below.
+
+```
+PST Filepath: /path/to/input/firstlast.pst
+Recipient/Mailbox Owner: firstlast
+Subject: email1subject
+
+Attachment Name: attachment1.txt
+Attachment SHA256:
+b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6
+Attachment Name: attachment2.doc
+Attachment SHA256:
+b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6
+```
 
 ### Cleanup
 
 This script will create a number of new directories and files for each .pst, .eml, and embedded attachment. It is recommended that you run the cleanup.sh script following execution and analysis in order to keep your filesystem tidy 🧹
+
+
