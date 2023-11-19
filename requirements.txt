@@ -1,0 +1,8 @@
+# The PST Exporter requires two primary dependancies
+#First is included in most debian OS flavors and is called readpst
+sudo apt install readpst
+
+#Second is a python library called eml-extractor, this is required for extracting the attachments out of the EML files. 
+pip install eml-extractor
+
+#Other dependancies may be required if you are using the reputationcheck.sh script in addition to the PSTexporter. 
